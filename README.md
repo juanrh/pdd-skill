@@ -1,6 +1,6 @@
 # PDD skill
 
-This is a skill to emulate the [Spec-driven development](https://www.youtube.com/watch?v=4qcWgPb-8Fk) approach of [Kiro](https://kiro.dev/docs/specs/), using the [Prompt-Driven Development](https://youtu.be/cf-WOKVn768?si=dNfaTMhOcJVYxsCk&t=2480) approach that was its predecessor. 
+This is a skill to emulate [Spec-Driven Development](https://www.youtube.com/watch?v=4qcWgPb-8Fk) as implemented on [Kiro](https://kiro.dev/docs/specs/), using the [Prompt-Driven Development](https://youtu.be/cf-WOKVn768?si=dNfaTMhOcJVYxsCk&t=2480) approach that was its predecessor. 
 
 ## Installation
 

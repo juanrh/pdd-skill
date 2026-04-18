@@ -16,7 +16,7 @@ testing
 ## Setup 
 
 Demo: screen recording with vibe CLI on Zed, ideally with Gemma4 on Ollama
-Note: agents do not seem to work in the Mistral agent for Zed
+Note: skill do work in the Mistral agent for Zed, when properly setup
 Note: seems to perform better with a separate agent session per phase (which makes sense)
 
 Check for requirements:
