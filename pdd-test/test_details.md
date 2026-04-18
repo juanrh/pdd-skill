@@ -1,4 +1,4 @@
-Valitions:
+Validations:
 
 - parameter types 
 - division by zero.
