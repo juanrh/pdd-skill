@@ -11,9 +11,9 @@ description: Develop software using the Prompt-Driven Development (PDD) method f
 
 1. **Requirements Clarification**: Guide the user through a series of questions to refine the initial _rough idea_ and develop a thorough specification. Files: `{project_dir}/rough-idea.md` (containing the provided rough idea); `{project_dir}/idea-honing.md` (for requirements clarification)
 2. **Preliminary Research**: Conduct research on relevant technologies, libraries, or existing code that could inform the design, while collaborating with the user for guidance. Directory for research notes: `{project_dir}/research/`
-3. **Technical design**: Develop a comprehensive design document based on the requirements and research. Directory for design documents: `{project_dir}/design/`
-4. **Implementation plan**: Create a structured implementation plan with a series of steps for implementing the design. Directory for implementation plans: `{project_dir}/implementation/`
-5. **Task breakdown**: Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`
+3. **Technical Design**: Develop a comprehensive design document based on the requirements and research. Directory for design documents: `{project_dir}/design/`
+4. **Implementation Plan**: Create a structured implementation plan with a series of steps for implementing the design. Directory for implementation plans: `{project_dir}/implementation/`
+5. **Task Breakdown**: Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`
 6. **Implementation**: Complete each of the tasks
 
 for **`{project_dir}` equals to `.agents/planning/{project_name}`**.   
@@ -26,6 +26,8 @@ For every file path specified here, you MUST interpret it as a relative path fro
 
 - `setup_pdd_sop` = `./assets/01-setup-pdd.sop.md`
 - `requirements_pdd_sop` = `./assets/02-requirements-pdd.sop.md`
+- `research_sop` = `./assets/03-research-pdd.sop.md`
+- `codebase_summary_sop` = `./assets/codebase-summary.sop.md`
 
 After loading this skill you MUST follow the instructions in "### List available operations ("help")" below.
 
@@ -36,6 +38,11 @@ The available operations and their shorthands are:
 - List available operations ("help")
 - Setup new PDD project ("setup")
 - Requirements Clarification ("requirements")
+- Preliminary Research ("research")
+- Technical Design ("design")
+- Implementation Plan ("plan")
+- Task Breakdown ("tasks")
+- Implementation ("implementation")
 
 If the user prompt matches some operation, you MUST execute the corresponding operation. 
 Otherwise, you MUST ask the user "What would you like to do next?", and then execute the corresponding operation.
@@ -53,5 +60,11 @@ Read `{setup_pdd_sop}` and follow its instructions:
 ### Requirements Clarification ("requirements")
 
 Read `{requirements_pdd_sop}` and follow its instructions:
+
+- You MUST use the default value for `project_dir`: do not ask for it
+
+### Preliminary Research ("research")
+
+Read `{research_sop}` and follow its instructions:
 
 - You MUST use the default value for `project_dir`: do not ask for it
