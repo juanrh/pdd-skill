@@ -2,12 +2,24 @@
 
 This is a skill to emulate the [Spec-driven development](https://www.youtube.com/watch?v=4qcWgPb-8Fk) approach of [Kiro](https://kiro.dev/docs/specs/), using the [Prompt-Driven Development](https://youtu.be/cf-WOKVn768?si=dNfaTMhOcJVYxsCk&t=2480) approach that was its predecessor. 
 
-## Setup
+## Installation
 
-[Install `uv`](https://docs.astral.sh/uv/getting-started/installation/)
-Install Python 3.12: `uv python install 3.12`.
-Install script dependencies: `uv sync --directory scripts --all-extras`
+Copy the directory `pdd` to your coding agent skills directory (e.g. `.vibe/skills`).
+
+## Development
+
+Install and use [`skills-ref` skills validator](https://agentskills.io/specification#validation):
+
+```bash
+## Install
+uv tool install skills-ref
+# Validate: this checks tokens and line limits recommended in the specification.
+## Note this will fail for vendor specific frontmatter keys like Vibe's CLI `user-invocable:` 
+agentskills validate pdd
+```
 
 ## Attribution
 
 - code-assist.sop.md, codebase-summary.sop.md,  code-task-generator.sop.md, pdd.sop.md: copied from https://github.com/strands-agents/agent-sop/tree/main/agent-sops under Apache License 2.0. Pieces of that content are used in several places of this project.
+- FastAPI skill (pdd-test/.vibe/skills/fastapi) taken from https://github.com/fastapi/fastapi/tree/master/fastapi/.agents/skills/fastapi under MIT license.
+- modern-python skill (pdd-test/.vibe/skills/modern-python) taken from https://officialskills.sh/trailofbits/skills/modern-python
