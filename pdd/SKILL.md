@@ -16,29 +16,42 @@ description: Develop software using the Prompt-Driven Development (PDD) method f
 5. **Task breakdown**: Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`
 6. **Implementation**: Complete each of the tasks
 
-for **`{project_dir}` equals to `.agents/planning/{project_name}`**. Each phase can be completed in 1 or more agent sessions, using the files at `{project_dir}` as **persistent memory**.
+for **`{project_dir}` equals to `.agents/planning/{project_name}`**.   
+Each phase can be completed in 1 or more agent sessions, using the files at `{project_dir}` as **persistent memory**.
+The **project progress file** `{project_dir}/progress.md` tracks the progress folowing the PDD process. s
 
 ## Available operations
 
 For every file path specified here, you MUST interpret it as a relative path from the parent directory of this file.  
 
-- `pdd_sop` = `assets/pdd.sop.md`
+- `setup_pdd_sop` = `./assets/01-setup-pdd.sop.md`
+- `requirements_pdd_sop` = `./assets/02-requirements-pdd.sop.md`
 
-After loading this skill you MUST follow the instructions in "### List available operations" below.
+After loading this skill you MUST follow the instructions in "### List available operations ("help")" below.
 
-### List available operations
+### List available operations ("help")
 
-The available operations are:
+The available operations and their shorthands are:
 
-- List available operations
-- Start new PDD project
+- List available operations ("help")
+- Setup new PDD project ("setup")
+- Requirements Clarification ("requirements")
 
 If the user prompt matches some operation, you MUST execute the corresponding operation. 
-Otherwise, you MUST ask the user "What should I do next?", and then execute the corresponding operation.
+Otherwise, you MUST ask the user "What would you like to do next?", and then execute the corresponding operation.
 
-### Start new PDD project
+### Setup new PDD project ("setup")
 
-Read `{pdd_sop}` and follow its instructions, with the following modifications:
+#### Steps
+
+##### 1. Execute setup SOP 
+
+Read `{setup_pdd_sop}` and follow its instructions:
 
 - You MUST use the default value for `project_dir`: do not ask for it
-- You MUST stop after step 1.
+
+### Requirements Clarification ("requirements")
+
+Read `{requirements_pdd_sop}` and follow its instructions:
+
+- You MUST use the default value for `project_dir`: do not ask for it
