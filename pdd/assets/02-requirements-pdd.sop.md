@@ -70,7 +70,21 @@ Create a new section "# Requirements List" in `{project_dir}/idea-honing.md` tha
 - You MUST maintain the original context and details of each requirement
 - You MUST ensure the requirements are clearly separated and easy to reference
 
-### 3. Update project progress file
+### 3. Review Requirements Completeness
+
+Review the current requirements and identify any typical requirements that might be missing for this type of project. Present any missing requirements to the user for consideration.
+
+**Constraints:**
+- You MUST review the gathered requirements against typical requirements for similar projects
+- You MUST identify any potentially missing requirements
+- You MUST present missing requirements as an itemized list to the user
+- You MUST ask the user if they want to continue iterating on requirements
+- If the user wants to continue, You MUST return to Step 1 (Requirements Clarification)
+- If the user is satisfied, You MUST proceed to the next step
+- You MUST NOT add requirements without explicit user approval
+- You MUST document the user's decision in the idea-honing.md file
+
+### 4. Update project progress file
 
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Requirements Clarification"
 
