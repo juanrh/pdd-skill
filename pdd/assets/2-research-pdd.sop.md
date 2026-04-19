@@ -26,41 +26,53 @@ This sop guides you through the process of transforming a rough idea into a deta
 
 ## Steps
 
-### 1. Create Project Structure
+### 1. Research Relevant Information
 
-Set up a directory structure to organize all artifacts created during the process.
+Conduct research on relevant technologies, libraries, or existing code that could inform the design, while collaborating with the user for guidance.
 
 **Constraints:**
-- You MUST create the specified project directory if it doesn't already exist
-- You MUST create the following files:
-  - {project_dir}/rough-idea.md (containing the provided rough idea)
-  - {project_dir}/idea-honing.md (for requirements clarification)
-- You MUST create the following subdirectories:
-  - {project_dir}/research/ (directory for research notes)
-  - {project_dir}/design/ (directory for design documents)
-  - {project_dir}/implementation/ (directory for implementation plans)
-- You MUST notify the user when the structure has been created
-- You MUST explain that this will ensure all project files remain in context throughout the process
+- You MUST identify areas where research is needed based on the requirements listed at {project_dir}/idea-honing.md
+- You MUST ask the user if they want do a summary of the existing codebase. If they say yes, you MUST read `{codebase_summary_sop}` and follow its instructions to summarize the code base. 
+- You MUST propose an initial research plan to the user, listing topics to investigate
+- You MUST ask the user for input on the research plan, including:
+  - Additional topics that should be researched
+  - Specific resources (files, websites, internal tools) the user recommends
+  - Areas where the user has existing knowledge to contribute
+- You MUST incorporate user suggestions into the research plan
+- You MUST document research findings in separate markdown files in the {project_dir}/research/ directory
+- You SHOULD organize research by topic (e.g., {project_dir}/research/existing-code.md, {project_dir}/research/technologies.md)
+- You MUST include mermaid diagrams when documenting system architectures, data flows, or component relationships in research
+- You MUST include links to relevant references and sources when research is based on external materials (websites, documentation, articles, etc.)
+- You MAY use tools like search_internal_code, read_internal_website, or fs_read to gather information
+- You MUST ask the user whether other available search tools should also be used.
+- You MUST periodically check with the user during the research process (these check-ins may involve brief dialogue to clarify feedback) to:
+  - Share preliminary findings
+  - Ask for feedback and additional guidance
+  - Confirm if the research direction remains valuable
+- You MUST summarize key findings that will inform the design
+- You SHOULD cite sources and include relevant links in research documents
+- You MUST ask the user if the research is sufficient before proceeding to the next step
+- You MUST offer to return to requirements clarification if research uncovers new questions or considerations
+- You MUST NOT automatically return to requirements clarification after research without explicit user direction because this could disrupt the user's intended workflow
+- You MUST wait for the user to decide the next step after completing research
 
-### 2. Create project progress file
+### 2. Iteration Checkpoint
 
-- You MUST create the **project progress file** `{project_dir}/progress.md` with the following content:
+Determine if further requirements clarification or research is needed before proceeding to design.
 
-```md
-- [x] Project setup
-- [ ] Requirements Clarification
-- [ ] Preliminary Research
-- [ ] Technical design
-- [ ] Implementation plan
-- [ ] Task breakdown
-- [ ] Implementation
-```
+**Constraints:**
+- You MUST summarize the current state of requirements and research to help the user make an informed decision
+- You MUST explicitly ask the user if they want to:
+  - Proceed to creating the detailed design
+  - Return to requirements clarification based on research findings
+  - Conduct additional research based on requirements
+- You MUST support iterating between requirements clarification and research as many times as needed
+- You MUST ensure that both the requirements and research are sufficiently complete before proceeding to design
+- You MUST NOT proceed to the design step without explicit user confirmation because this could skip important refinement steps
 
-### 3. Prompt the user for next steps
+### 3. Update project progress file
 
-- You MUST provide an overview of the PDD process as explained on "## Overview" before.
-- You MUST explain that the process is iterative and the user can move between requirements clarification and research as needed
-- You MUST wait for explicit user direction before proceeding to any subsequent step.
+- You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Preliminary Research"
 
 ## Examples
 
@@ -125,23 +137,9 @@ Would you like me to explain any specific part of the design or implementation p
 
 ## Troubleshooting
 
-### Requirements Clarification Stalls
-If the requirements clarification process seems to be going in circles or not making progress:
-- You SHOULD suggest moving to a different aspect of the requirements
-- You MAY provide examples or options to help the user make decisions
-- You SHOULD summarize what has been established so far and identify specific gaps
-- You MAY suggest conducting research to inform requirements decisions
-
 ### Research Limitations
 If you cannot access needed information:
 - You SHOULD document what information is missing
 - You SHOULD suggest alternative approaches based on available information
 - You MAY ask the user to provide additional context or documentation
 - You SHOULD continue with available information rather than blocking progress
-
-### Design Complexity
-If the design becomes too complex or unwieldy:
-- You SHOULD suggest breaking it down into smaller, more manageable components
-- You SHOULD focus on core functionality first
-- You MAY suggest a phased approach to implementation
-- You SHOULD return to requirements clarification to prioritize features if needed
