@@ -86,6 +86,7 @@ Review the current requirements and identify any typical requirements that might
 
 ### 4. Update project progress file
 
+**Constraints:**
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Requirements Clarification"
 
 ## Examples

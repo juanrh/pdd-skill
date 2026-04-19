@@ -72,6 +72,7 @@ Determine if further requirements clarification or research is needed before pro
 
 ### 3. Update project progress file
 
+**Constraints:**
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Preliminary Research"
 
 ## Examples
