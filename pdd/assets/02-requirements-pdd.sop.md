@@ -58,7 +58,19 @@ Guide the user through a series of questions to refine the initial idea and deve
 - You MUST be prepared to return to requirements clarification after research if new questions emerge
 - You MUST NOT proceed with any other steps until explicitly directed by the user because this could skip important clarification steps
 
-### 2. Update project progress file
+### 2. Create Requirements List
+
+Create a new section "# Requirements List" in `{project_dir}/idea-honing.md` that consolidates all requirements gathered during the clarification process. Each requirement should have a unique code (e.g., "[R01-Endpoints]") and its own subsection.
+
+**Constraints:**
+- You MUST create a "# Requirements List" section in the idea-honing.md file
+- You MUST assign a unique code to each requirement using the format [RXX-Description] where XX is a sequential number
+- You MUST organize each requirement in its own subsection under the Requirements List
+- You MUST include all requirements gathered during the clarification process
+- You MUST maintain the original context and details of each requirement
+- You MUST ensure the requirements are clearly separated and easy to reference
+
+### 3. Update project progress file
 
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Requirements Clarification"
 
@@ -72,7 +84,7 @@ Rough idea: I want to build a feature for our team's internal tool that allows u
 Project name: template-feature
 ```
 
-### Example Output
+### Example `{project_dir}/idea-honing.md` 
 
 ```
 # Requirements Clarification
