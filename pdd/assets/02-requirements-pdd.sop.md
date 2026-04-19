@@ -75,52 +75,35 @@ Project name: template-feature
 ### Example Output
 
 ```
-# Research Phase Interaction
+# Requirements Clarification
 
-Based on your requirements, I've identified several areas that would benefit from research:
+This document will be used to refine the initial idea through Q&A.
 
-1. **Existing template solutions** - Understanding what's already available
-2. **Storage and versioning approaches** - How to handle template versions and sharing
-3. **Custom field validation patterns** - Best practices for dynamic field validation
+## Question 1: API Endpoint Structure
+**Question:** What specific endpoints should the beer API expose?
 
-I notice you have several additional MCP search tools available beyond the standard ones, including 'peccy web search' and other external search capabilities. Should I incorporate these additional search tools into the research process for broader coverage of template management solutions and industry best practices?
+**Answer:** The API should expose 3 separate endpoints:
+- `/order`
+- `/drink`
+- `/dispose`
 
----
+**Additional Decision:** Use API version v1, so endpoints will be prefixed with `/v1`
 
-# Project Summary
+...
 
-I've completed the transformation of your rough idea into a detailed design with an implementation plan. Here's what was created:
+--- 
 
-## Directory Structure
-- .agents/planning/template-feature/
-  - rough-idea.md (your initial concept)
-  - idea-honing.md (our Q&A requirements clarification)
-  - research/
-    - existing-templates.md
-    - storage-options.md
-    - external-solutions.md
-  - design/
-    - detailed-design.md
-  - implementation/
-    - plan.md (includes implementation checklist)
-  - summary.md (this document)
+# Requirements List
 
-## Key Design Elements
-- Template management system with CRUD operations
-- Role-based access control for sharing
-- Versioning system for templates
-- Custom fields with validation
-- Document generation engine
+## [R01-Endpoints]
 
-## Implementation Approach
-The implementation plan breaks down the work into 12 incremental steps, starting with core data models and building up to the complete feature set.
+The API should expose 3 separate endpoints:
 
-## Next Steps
-1. Review the detailed design document at .agents/planning/template-feature/design/detailed-design.md
-2. Check the implementation plan and checklist at .agents/planning/template-feature/implementation/plan.md
-3. Begin implementation following the checklist in the implementation plan
-
-Would you like me to explain any specific part of the design or implementation plan in more detail?
+- `/v1/order` - Order a beer
+  - Body format: JSON object with fields
+    - "brand": string
+    - "units": integer between 0 and 10
+...
 ```
 
 ## Troubleshooting
@@ -131,17 +114,3 @@ If the requirements clarification process seems to be going in circles or not ma
 - You MAY provide examples or options to help the user make decisions
 - You SHOULD summarize what has been established so far and identify specific gaps
 - You MAY suggest conducting research to inform requirements decisions
-
-### Research Limitations
-If you cannot access needed information:
-- You SHOULD document what information is missing
-- You SHOULD suggest alternative approaches based on available information
-- You MAY ask the user to provide additional context or documentation
-- You SHOULD continue with available information rather than blocking progress
-
-### Design Complexity
-If the design becomes too complex or unwieldy:
-- You SHOULD suggest breaking it down into smaller, more manageable components
-- You SHOULD focus on core functionality first
-- You MAY suggest a phased approach to implementation
-- You SHOULD return to requirements clarification to prioritize features if needed

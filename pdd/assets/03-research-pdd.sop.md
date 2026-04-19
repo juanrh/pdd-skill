@@ -137,23 +137,9 @@ Would you like me to explain any specific part of the design or implementation p
 
 ## Troubleshooting
 
-### Requirements Clarification Stalls
-If the requirements clarification process seems to be going in circles or not making progress:
-- You SHOULD suggest moving to a different aspect of the requirements
-- You MAY provide examples or options to help the user make decisions
-- You SHOULD summarize what has been established so far and identify specific gaps
-- You MAY suggest conducting research to inform requirements decisions
-
 ### Research Limitations
 If you cannot access needed information:
 - You SHOULD document what information is missing
 - You SHOULD suggest alternative approaches based on available information
 - You MAY ask the user to provide additional context or documentation
 - You SHOULD continue with available information rather than blocking progress
-
-### Design Complexity
-If the design becomes too complex or unwieldy:
-- You SHOULD suggest breaking it down into smaller, more manageable components
-- You SHOULD focus on core functionality first
-- You MAY suggest a phased approach to implementation
-- You SHOULD return to requirements clarification to prioritize features if needed
