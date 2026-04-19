@@ -5,5 +5,7 @@ git checkout pdd-test
 cp -r pdd pdd-test/.vibe/skills/
 echo
 echo
-echo "As initial prompt use: setup a new PDD project for idea.md"
+echo "Suggested prompts"
+echo "- initial prompt use: setup a new PDD project for idea.md"
+echo "- continue: PDD skill continue"
 echo

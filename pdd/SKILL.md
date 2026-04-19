@@ -24,9 +24,10 @@ The **project progress file** `{project_dir}/progress.md` tracks the progress fo
 
 For every file path specified here, you MUST interpret it as a relative path from the parent directory of this file.  
 
+- `continue_pdd_sop` = `./assets/continue-pdd.sop.md`
 - `setup_pdd_sop` = `./assets/01-setup-pdd.sop.md`
 - `requirements_pdd_sop` = `./assets/02-requirements-pdd.sop.md`
-- `research_sop` = `./assets/03-research-pdd.sop.md`
+- `research_pdd_sop` = `./assets/03-research-pdd.sop.md`
 - `codebase_summary_sop` = `./assets/codebase-summary.sop.md`
 
 After loading this skill you MUST follow the instructions in "### List available operations ("help")" below.
@@ -36,6 +37,7 @@ After loading this skill you MUST follow the instructions in "### List available
 The available operations and their shorthands are:
 
 - List available operations ("help")
+- Continue PDD process ("continue")
 - Setup new PDD project ("setup")
 - Requirements Clarification ("requirements")
 - Preliminary Research ("research")
@@ -47,11 +49,11 @@ The available operations and their shorthands are:
 If the user prompt matches some operation, you MUST execute the corresponding operation. 
 Otherwise, you MUST ask the user "What would you like to do next?", and then execute the corresponding operation.
 
+### Continue PDD process ("continue")
+
+Read `{continue_pdd_sop}` and follow its instructions
+
 ### Setup new PDD project ("setup")
-
-#### Steps
-
-##### 1. Execute setup SOP 
 
 Read `{setup_pdd_sop}` and follow its instructions:
 
@@ -65,6 +67,6 @@ Read `{requirements_pdd_sop}` and follow its instructions:
 
 ### Preliminary Research ("research")
 
-Read `{research_sop}` and follow its instructions:
+Read `{research_pdd_sop}` and follow its instructions:
 
 - You MUST use the default value for `project_dir`: do not ask for it

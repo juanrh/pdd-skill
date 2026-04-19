@@ -20,6 +20,6 @@ agentskills validate pdd
 
 ## Attribution
 
-- code-assist.sop.md, codebase-summary.sop.md,  code-task-generator.sop.md, pdd.sop.md: copied from https://github.com/strands-agents/agent-sop/tree/main/agent-sops under Apache License 2.0. Pieces of that content are used in several places of this project.
+- agent-sop-format.md, code-assist.sop.md, codebase-summary.sop.md,  code-task-generator.sop.md, pdd.sop.md: copied from https://github.com/strands-agents/agent-sop/tree/main/agent-sops under Apache License 2.0. Pieces of that content are used in several places of this project.
 - FastAPI skill (pdd-test/.vibe/skills/fastapi) taken from https://github.com/fastapi/fastapi/tree/master/fastapi/.agents/skills/fastapi under MIT license.
 - modern-python skill (pdd-test/.vibe/skills/modern-python) taken from https://officialskills.sh/trailofbits/skills/modern-python
