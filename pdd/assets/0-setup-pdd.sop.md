@@ -52,7 +52,6 @@ Set up a directory structure to organize all artifacts created during the proces
 - [ ] Requirements Clarification
 - [ ] Preliminary Research
 - [ ] Technical design
-- [ ] Task breakdown
 - [ ] Implementation
 ```
 

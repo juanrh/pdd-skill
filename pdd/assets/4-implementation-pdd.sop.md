@@ -23,17 +23,38 @@ Determine the step number `I` for the first pending step on the checklist at the
 
 ### 2. Generate Task Files
 
-Read `{code_task_generator_sop}` and follow its instructions using the following parameters:
+First, check if `{project_dir}/implementation/tasks/step{NN}` where `NN` is the zero-padded version of `I` already exists.
+
+**Constraints for existing task check:**
+- You MUST check if a task file already exists for the current step
+- If the task file exists, You MUST inform the user: "Resuming implementation of step {NN}"
+- If the task file exists, You MUST skip task generation and proceed directly to step 3
+
+If no existing task file is found, read `{code_task_generator_sop}` and follow its instructions using the following parameters:
 - `input` = `{project_dir}/implementation/plan.md`
 - `step_number` = `{I}`
 - `output_dir` = `{project_dir}/implementation/tasks` 
 - `project_name` = `{project_name}`
 
-**Constraints:**
+**Constraints for task generation:**
 - You MUST locate and read the code task generator SOP
 - You MUST provide all required parameters to the SOP
 - You MUST ensure the output directory exists before generating tasks
 - You MUST follow all instructions in the code task generator SOP
+
+After generating tasks (or if resuming existing tasks), You MUST present the implementation plan to the user and ask for their feedback:
+- You MUST show the user what tasks will be implemented
+- You MUST ask: "What do you think about this implementation plan?"
+- You MUST iterate with the user, making adjustments based on their feedback
+- You MUST continue this dialogue until the user indicates they are satisfied
+- Only when the user is satisfied, You MUST proceed to step 3
+
+**Constraints for user approval:**
+- You MUST clearly communicate the planned implementation approach
+- You MUST be responsive to user concerns and suggestions
+- You MUST make requested adjustments to the plan
+- You MUST obtain explicit user approval before proceeding
+- You MUST document any changes made based on user feedback
 
 ### 3. Process Task Files
 
