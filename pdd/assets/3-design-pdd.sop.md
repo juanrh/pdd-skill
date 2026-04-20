@@ -6,9 +6,10 @@ This sop guides you through the process of transforming a rough idea into a deta
 
 ## Parameters
 
-- **rough_idea** (required): The initial concept or idea you want to develop into a detailed design
-- **project_name** (optional): A short, descriptive name for the project. If not provided, will be generated from the rough idea
+- **project_name** (required): A short, descriptive name for the project. If not provided, will be generated from the rough idea
 - **project_dir** (optional, default: ".agents/planning/{project_name}"): The base directory where all project files will be stored
+- **rough_idea** (optional, default: "{project_dir}/rough-idea.md"): The initial concept or idea you want to develop into a detailed design
+
 
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time
@@ -54,6 +55,7 @@ Develop a comprehensive design document based on the requirements and research.
 - You MUST generate mermaid diagrams for architectural overviews, data flow, and component relationships
 - You MUST ensure the design addresses all requirements identified during the clarification process
 - You SHOULD highlight design decisions and their rationales, referencing research findings where applicable
+- You SHOULD link relevant sections of documents from {project_dir}/research/
 - You MUST review the design with the user and iterate based on feedback
 - You MUST explicitly ask the user if they are ready to proceed to implementation before moving to Step 7
 - You MUST NOT proceed to the implementation plan step without explicit user confirmation because this could skip important design refinement
@@ -146,6 +148,7 @@ I've completed the transformation of your rough idea into a detailed design with
     - detailed-design.md
   - implementation/
     - plan.md (includes implementation checklist)
+    - tasks/
   - summary.md (this document)
 
 ## Key Design Elements

@@ -39,6 +39,7 @@ Set up a directory structure to organize all artifacts created during the proces
   - {project_dir}/research/ (directory for research notes)
   - {project_dir}/design/ (directory for design documents)
   - {project_dir}/implementation/ (directory for implementation plans)
+  - {project_dir}/implementation/tasks (directory for implementation tasks)
 - You MUST notify the user when the structure has been created
 - You MUST explain that this will ensure all project files remain in context throughout the process
 
@@ -102,6 +103,7 @@ I've completed the transformation of your rough idea into a detailed design with
     - detailed-design.md
   - implementation/
     - plan.md (includes implementation checklist)
+    - tasks/
   - summary.md (this document)
 
 ## Key Design Elements

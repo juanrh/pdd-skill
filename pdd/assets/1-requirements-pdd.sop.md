@@ -6,9 +6,10 @@ This sop guides you through the process of transforming a rough idea into a deta
 
 ## Parameters
 
-- **rough_idea** (required): The initial concept or idea you want to develop into a detailed design
-- **project_name** (optional): A short, descriptive name for the project. If not provided, will be generated from the rough idea
+- **project_name** (required): A short, descriptive name for the project. If not provided, will be generated from the rough idea
 - **project_dir** (optional, default: ".agents/planning/{project_name}"): The base directory where all project files will be stored
+- **rough_idea** (optional, default: "{project_dir}/rough-idea.md"): The initial concept or idea you want to develop into a detailed design
+
 
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time

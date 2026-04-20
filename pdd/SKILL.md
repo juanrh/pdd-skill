@@ -14,8 +14,8 @@ description: Develop software using the Prompt-Driven Development (PDD) method f
 3. **Technical Design**: Develop a comprehensive design document based on the requirements and research. Then create a structured implementation plan with a series of steps for implementing the design. 
     - Directory for design documents: `{project_dir}/design/`
     - Directory for implementation plans: `{project_dir}/implementation/`
-4. **Task Breakdown**: Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`
-5. **Implementation**: Complete each of the tasks
+4. **Implementation**: Implement the implementation plan
+    - Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`Complete each of the tasks
 
 Each phase can be completed in 1 or more agent sessions, using the files at `{project_dir}` as **persistent memory**.
 The **project progress file** `{project_dir}/progress.md` tracks the progress folowing the PDD process. 
@@ -29,7 +29,9 @@ For every file path specified here, you MUST interpret it as a relative path fro
 - `requirements_pdd_sop` = `./assets/1-requirements-pdd.sop.md`
 - `research_pdd_sop` = `./assets/2-research-pdd.sop.md`
 - `design_pdd_sop` = `./assets/3-design-pdd.sop.md`
+- `implementation_pdd_sop` = `./assets/4-implementation-pdd.sop.md` 
 - `codebase_summary_sop` = `./assets/codebase-summary.sop.md`
+- `code_task_generator_sop` = `./assets/code-task-generator.sop.md`
 
 After loading this skill you MUST follow the instructions in "### List available operations ("help")" below.
 
@@ -43,7 +45,6 @@ The available operations and their shorthands are:
 - Requirements Clarification ("requirements")
 - Preliminary Research ("research")
 - Technical Design ("design")
-- Task Breakdown ("tasks")
 - Implementation ("implementation")
 
 If the user prompt matches some operation, you MUST execute the corresponding operation. 
@@ -74,5 +75,11 @@ Read `{research_pdd_sop}` and follow its instructions:
 ### Technical Design ("design")
 
 Read `{design_pdd_sop}` and follow its instructions:
+
+- You MUST use the default value for `project_dir`: do not ask for it
+
+### Implementation ("implementation")
+
+Read `{implementation_pdd_sop}` and follow its instructions:
 
 - You MUST use the default value for `project_dir`: do not ask for it
