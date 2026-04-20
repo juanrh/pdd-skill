@@ -52,6 +52,7 @@ Guide the user through a series of questions to refine the initial idea and deve
 - You MUST continue asking questions until sufficient detail is gathered
 - You SHOULD ask about edge cases, user experience, technical constraints, and success criteria
 - You SHOULD adapt follow-up questions based on previous answers
+- You SHOULD load any relevant agent skills you have available
 - You MAY suggest options when the user is unsure about a particular aspect
 - You MAY recognize when the requirements clarification process appears to have reached a natural conclusion
 - You MUST explicitly ask the user if they feel the requirements clarification is complete before moving to the next step

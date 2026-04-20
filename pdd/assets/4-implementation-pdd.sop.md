@@ -38,6 +38,7 @@ If no existing task file is found, read `{code_task_generator_sop}` and follow i
 
 **Constraints for task generation:**
 - You MUST locate and read the code task generator SOP
+- You SHOULD load any relevant agent skills you have available
 - You MUST provide all required parameters to the SOP
 - You MUST ensure the output directory exists before generating tasks
 - You MUST follow all instructions in the code task generator SOP
@@ -75,6 +76,7 @@ Read the contents of the pending task file to understand the implementation requ
 - You MUST identify all requirements, specifications, and constraints listed in the task file
 - You MUST understand the expected outcomes and deliverables
 - You MUST note any dependencies or prerequisites mentioned in the task
+- You SHOULD load any relevant agent skills you have available
 
 ### 5. Implement Task Requirements
 

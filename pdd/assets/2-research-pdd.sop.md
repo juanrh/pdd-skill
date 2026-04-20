@@ -42,6 +42,7 @@ Conduct research on relevant technologies, libraries, or existing code that coul
 - You MUST document research findings in separate markdown files in the {project_dir}/research/ directory
 - You SHOULD organize research by topic (e.g., {project_dir}/research/existing-code.md, {project_dir}/research/technologies.md)
 - You MUST include mermaid diagrams when documenting system architectures, data flows, or component relationships in research
+- You SHOULD load any relevant agent skills you have available
 - You MUST include links to relevant references and sources when research is based on external materials (websites, documentation, articles, etc.)
 - You MAY use tools like search_internal_code, read_internal_website, or fs_read to gather information
 - You MUST ask the user whether other available search tools should also be used.
