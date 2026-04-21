@@ -53,7 +53,7 @@ Develop a comprehensive design document based on the requirements and research.
   - Key constraints and limitations identified during research
 - You SHOULD include diagrams or visual representations when appropriate using mermaid syntax
 - You MUST generate mermaid diagrams for architectural overviews, data flow, and component relationships
-- You SHOULD load any relevant agent skills you have available
+- You MUST load any relevant agent skills you have available
 - You MUST ensure the design addresses all requirements identified during the clarification process
 - You SHOULD highlight design decisions and their rationales, referencing research findings where applicable
 - You SHOULD link relevant sections of documents from {project_dir}/research/
