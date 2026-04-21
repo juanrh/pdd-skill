@@ -24,6 +24,7 @@ The **project progress file** `{project_dir}/progress.md` tracks the progress fo
 
 For every file path specified here, you MUST interpret it as a relative path from the parent directory of this file.  
 
+- `help_pdd_sop` = `./assets/help-pdd.sop.md`
 - `continue_pdd_sop` = `./assets/continue-pdd.sop.md`
 - `setup_pdd_sop` = `./assets/0-setup-pdd.sop.md`
 - `requirements_pdd_sop` = `./assets/1-requirements-pdd.sop.md`
@@ -37,18 +38,7 @@ After loading this skill you MUST follow the instructions in "### List available
 
 ### List available operations ("help")
 
-The available operations and their shorthands are:
-
-- List available operations ("help")
-- Continue PDD process ("continue")
-- Setup new PDD project ("setup")
-- Requirements Clarification ("requirements")
-- Preliminary Research ("research")
-- Technical Design ("design")
-- Implementation ("implementation")
-
-If the user prompt matches some operation, you MUST execute the corresponding operation. 
-Otherwise, you MUST ask the user "What would you like to do next?", and then execute the corresponding operation.
+Read `{help_pdd_sop}` and follow its instructions
 
 ### Continue PDD process ("continue")
 
