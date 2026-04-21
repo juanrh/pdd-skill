@@ -62,8 +62,8 @@ After generating tasks (or if resuming existing tasks), You MUST present the imp
 Find a **pending task file** at `{project_dir}/implementation/tasks/step{NN}` where `NN` is the zero-padded version of `I`.
 
 **Constraints:**
-- You MUST look for task files with the pattern `step{NN}.md` where NN is zero-padded (e.g., step01.md, step10.md)
-- You MUST identify task files that do not start with "# DONE -" in their first heading
+- You MUST look for task files with the pattern `step{NN}/task-*.code-task.md` where NN is zero-padded (e.g., step01/task-01-project-setup.code-task.md, step10/task-01-another-task.code-task.md)
+- You MUST identify task files that start with "task-" in their filename (not "DONE-task-")
 - If no pending task file exists, You MUST tell the user: "Please open a new session to continue with the next task, using the prompt 'PDD skill continue'"
 - If a pending task file exists, You MUST proceed to read and implement it
 
@@ -96,7 +96,7 @@ Perform the coding work and other changes required to implement the task as desc
 After implementing a task file:
 
 **Constraints:**
-- You MUST mark the task as complete by adding "# DONE -" at the start of the first heading of the file
+- You MUST mark the task as complete by renaming the file from `task-*.code-task.md` to `DONE-task-*.code-task.md`
 - You MUST verify the task was completed successfully by reviewing the implementation
 - You MUST inform the user: "Task complete 🎉. Looking for more pending tasks"
 - You MUST look for another pending task file to continue processing
@@ -106,6 +106,8 @@ After implementing a task file:
 
 ### Example Task File Before Completion
 ```markdown
+Filename: step01/task-01-implement-auth.code-task.md
+
 # Implement User Authentication
 
 ## Description
@@ -119,7 +121,9 @@ Create authentication endpoints and middleware
 
 ### Example Task File After Completion
 ```markdown
-# DONE - Implement User Authentication
+Filename: step01/DONE-task-01-implement-auth.code-task.md
+
+# Implement User Authentication
 
 ## Description
 Create authentication endpoints and middleware
@@ -132,13 +136,13 @@ Create authentication endpoints and middleware
 
 ### Example Implementation Process
 
-**Step 3:** Find pending task file `step01.md`
+**Step 3:** Find pending task file `step01/task-01-implement-auth.code-task.md`
 **Step 4:** Read task requirements (authentication implementation)
 **Step 5:** Implement the requirements:
 - Create `auth/middleware.py` with JWT validation
 - Create `auth/endpoints.py` with login/logout routes
 - Create `tests/test_auth.py` with unit tests
-**Step 6:** Mark task complete by adding "# DONE -" prefix
+**Step 6:** Mark task complete by renaming to `step01/DONE-task-01-implement-auth.code-task.md`
 
 ## Troubleshooting
 
