@@ -102,6 +102,23 @@ After implementing a task file:
 - You MUST look for another pending task file to continue processing
 - You MUST repeat steps 3-6 until no more pending task files exist for the current step
 
+### 7. Update Codebase Summary
+
+You MUST read `{codebase_summary_sop}` and follow its instructions to summarize the code base.
+
+**Constraints:**
+- You MUST update the codebase summary on every change
+- You MUST follow all instructions in the codebase summary SOP
+
+### 8. Validate Step Completion
+
+In `{project_dir}/implementation/tasks/step{NN}` see if there is any files that start with "task-" in their filename (not "DONE-task-"). If there is no such file, then ask the user to check `{project_dir}/implementation/plan.md` and validate if the current step is complete, and mark it as done if so.
+
+**Constraints:**
+- You MUST check for any remaining pending task files
+- You MUST ask the user to validate step completion if no pending tasks remain
+- You MUST follow the user's instruction on marking the step as complete
+
 ## Examples
 
 ### Example Task File Before Completion
