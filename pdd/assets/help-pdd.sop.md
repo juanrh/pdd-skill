@@ -33,7 +33,13 @@ To **track the progress** use the following files:
 - Implementation: `{project_dir}/implementation/plan.md`
 - Implementation step: `{project_dir}/implementation/tasks/step{NN}`
 
-What would you like to do next?
+**Recommendations**: 
+- Start a new agent session for each phase (requirements, research, design, ...). The project directory will save the project context for the agent.
+- Use "PDD skill continue" on the new session to quickly load the skill and move to the next phase.
+
+---
+
+_What would you like to do next?_
 ```
 
 **Constraints:**
