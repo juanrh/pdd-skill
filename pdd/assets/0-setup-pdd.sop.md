@@ -34,7 +34,7 @@ Set up a directory structure to organize all artifacts created during the proces
 - You MUST create the specified project directory if it doesn't already exist
 - You MUST create the following files:
   - {project_dir}/rough-idea.md (containing the provided rough idea)
-  - {project_dir}/idea-honing.md (for requirements clarification)
+  - {project_dir}/idea-honing.md (for requirements clarification, MUST be created empty)
 - You MUST create the following subdirectories:
   - {project_dir}/research/ (directory for research notes)
   - {project_dir}/design/ (directory for design documents)
