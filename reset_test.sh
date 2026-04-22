@@ -3,6 +3,8 @@
 find pdd-test -mindepth 1 -delete
 git checkout pdd-test
 cp -r pdd pdd-test/.vibe/skills/
+mkdir -p pdd-test/.cline/skills
+cp -r pdd-test/.vibe/skills/* pdd-test/.cline/skills
 echo
 echo
 echo "Suggested prompts"
