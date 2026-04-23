@@ -22,13 +22,13 @@ uvx cookiecutter --no-input \
   type_checker="mypy" \
   open_source_license="Apache Software License 2.0"
 
-echo ''> calc-api/.pre-commit-config.yaml
+# Prevent precommit messing up with the whole git repo
 sed -i '/@uv run pre-commit install/d' calc-api/Makefile
+sed -i 's/@uv run pre-commit run -a/@uv run pre-commit run --files ./g' calc-api/Makefile
 pushd calc-api
 make install check
 make check test
 popd
-rm -rf  ../.git/hooks/pre-commit
 popd
 
 echo "Project scaffolding complete"
