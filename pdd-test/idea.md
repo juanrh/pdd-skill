@@ -1,13 +1,11 @@
 
-We want to implement a REST API for a calculator using Fastapi and Python 3.12.  
+We want to implement a REST API for a calculator using Fastapi and Python 3.12.
 
-- Use uv as build tool
+- Modify the code on `calc-api`
 - Operations: add, substract, mutliplication, division.
-- Force python version with pyproject.toml
-- Create Makefile with targets
-  - `venv`: create virtual env and update dependencies
-  - `lint`: run ruff and mypy
-  - `test`: run test
-  - `run`: launch the API 
+- Build using the following Makefile targets defined on `calc-api/Makefile` 
+  - `install`: update dependencies
+  - `check`: linters and typechecking
+  - `test`: run tests
 
 You MUST NOT run the API, but instead ask me to do it
