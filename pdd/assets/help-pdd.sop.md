@@ -10,7 +10,24 @@ None
 
 ## Steps
 
-### 1. Show Available Operations
+### 1. Check Prior User Context
+
+Before displaying any help message, check if the user already mentioned a command that matches one of the available operations in their previous prompts (before this SOP was loaded).
+
+**Constraints:**
+- You MUST check if the user's prior messages (from before this SOP was loaded) contain any mention of the following operations:
+  - "help"
+  - "continue"
+  - "setup"
+  - "requirements"
+  - "research"
+  - "design"
+  - "implementation"
+- If a match is found, you MUST skip directly to executing the corresponding operation without executing any other steps of this SOP, because the user has already indicated what they want to do.
+- If no match is found, you MUST proceed to step 2 (Show Available Operations).
+- You MUST NOT display the help message (step 2) if a prior operation match was found, since the user has already indicated their intent and showing the help would be redundant and disruptive.
+
+### 2. Show Available Operations
 
 Display the following message to the user and wait for their response:
 
@@ -46,7 +63,7 @@ _What would you like to do next?_
 - You MUST display the message exactly as written above.
 - You MUST wait for the user's response before proceeding.
 
-### 2. Determine User's Choice
+### 3. Determine User's Choice
 
 Analyze the user's response to determine if it matches one of the available operations listed in the "## Available operations" section.
 
