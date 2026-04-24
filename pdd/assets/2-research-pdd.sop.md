@@ -26,13 +26,22 @@ This sop guides you through the process of transforming a rough idea into a deta
 
 ## Steps
 
-### 1. Research Relevant Information
+### 1. Summarize Existing Codebase
+
+Ask the user if they want to summarize the existing codebase. If they say yes, read `{codebase_summary_sop}` and follow its instructions to summarize the code base.
+
+**Constraints:**
+- If the user confirms, You MUST locate the existing codebase, and set `codebase_path` to the root path of the existing codebase
+- If the user confirms, You MUST use default values for all other parameters of the codebase summary SOP
+- If the user confirms, You MUST summarize the current state of the code
+
+### 2. Research Relevant Information
 
 Conduct research on relevant technologies, libraries, or existing code that could inform the design, while collaborating with the user for guidance.
 
 **Constraints:**
 - You MUST identify areas where research is needed based on the requirements listed at {project_dir}/idea-honing.md
-- You MUST ask the user if they want do a summary of the existing codebase. If they say yes, you MUST read `{codebase_summary_sop}` and follow its instructions to summarize the code base. 
+
 - You MUST propose an initial research plan to the user, listing topics to investigate
 - You MUST ask the user for input on the research plan, including:
   - Additional topics that should be researched
@@ -57,7 +66,7 @@ Conduct research on relevant technologies, libraries, or existing code that coul
 - You MUST NOT automatically return to requirements clarification after research without explicit user direction because this could disrupt the user's intended workflow
 - You MUST wait for the user to decide the next step after completing research
 
-### 2. Iteration Checkpoint
+### 3. Iteration Checkpoint
 
 Determine if further requirements clarification or research is needed before proceeding to design.
 
@@ -71,7 +80,7 @@ Determine if further requirements clarification or research is needed before pro
 - You MUST ensure that both the requirements and research are sufficiently complete before proceeding to design
 - You MUST NOT proceed to the design step without explicit user confirmation because this could skip important refinement steps
 
-### 3. Update project progress file
+### 4. Update project progress file
 
 **Constraints:**
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Preliminary Research"
