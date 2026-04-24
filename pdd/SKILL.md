@@ -24,6 +24,7 @@ The **project progress file** `{project_dir}/progress.md` tracks the progress fo
 
 For every file path specified here, you MUST interpret it as a relative path from the parent directory of this file.  
 
+- `scripts_dir` = `./scripts`
 - `help_pdd_sop` = `./assets/help-pdd.sop.md`
 - `continue_pdd_sop` = `./assets/continue-pdd.sop.md`
 - `setup_pdd_sop` = `./assets/0-setup-pdd.sop.md`

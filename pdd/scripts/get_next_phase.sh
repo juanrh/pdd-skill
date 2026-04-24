@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#
+# Returns the name of the first pending phase in the progress.md file of
+# the specified project directory
+#
+
 set -ue
 
 project_dir="${1}"
