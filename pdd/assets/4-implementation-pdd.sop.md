@@ -101,7 +101,11 @@ After implementing a task file:
 - You MUST verify the task was completed successfully by reviewing the implementation
 - You MUST inform the user: "Task complete 🎉. Looking for more pending tasks"
 - You MUST look for another pending task file to continue processing
-- You MUST repeat steps 3-6 until no more pending task files exist for the current step
+- You MUST ask the user for confirmation before moving to the next task
+- You SHOULD remind the user that:
+  1) Agent performance improves when using a fresh session
+  2) If the task modified the code a lot, it's recommended to use "PDD skill code-summary" to update the persistent agent context
+- Only after receiving user confirmation, if the user confirms you MUST repeat steps 3-6 for the next pending task file
 
 ### 7. Validate Step Completion
 
@@ -111,6 +115,9 @@ In `{project_dir}/implementation/tasks/step{NN}` see if there is any files that 
 - You MUST check for any remaining pending task files
 - You MUST ask the user to validate step completion if no pending tasks remain
 - You MUST follow the user's instruction on marking the step as complete
+- You SHOULD suggest the user:
+  - Start a new agent session and use "PDD skill code-summary" to update the persistent agent context
+  - Then continue the PDD process on a fresh agent session
 
 ## Examples
 
