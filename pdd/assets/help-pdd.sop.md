@@ -24,13 +24,11 @@ Before displaying any help message, check if the user already mentioned a comman
   - "design"
   - "implementation"
   - "code-summary"
-- If a match is found, you MUST skip directly to executing the corresponding operation without executing any other steps of this SOP, because the user has already indicated what they want to do.
-- If no match is found, you MUST proceed to step 2 (Show Available Operations).
-- You MUST NOT display the help message (step 2) if a prior operation match was found, since the user has already indicated their intent and showing the help would be redundant and disruptive.
+- If a match is found, you MUST skip directly to step 3 (Determine User's Choice) without executing step 2 of this SOP, because the user has already indicated what they want to do.
 
 ### 2. Show Available Operations
 
-Display the following message to the user and wait for their response:
+Display the following message to the user:
 
 ```md
 **Prompt-Driven Development (PDD)** is a methodology for AI-assisted coding that guides both the user and the coding agent to follow a defined software development process.
@@ -56,18 +54,15 @@ To **track the progress** use the following files:
 - Start a new _agent session_ for each _phase_ (requirements, research, design, ...). The project directory will save the project context for the agent.
   - Use "PDD skill: continue" on the new session to quickly load the skill and move to the next phase.
 - After _completing_ an implementation _step or task_, consider _updating_ the persistent agent _context_ at `.agents/summary` using "PDD skill: code-summary" in a separate agent session before continuing with the next task.
-
----
-
-_What would you like to do next?_
 ```
 
 **Constraints:**
 - You MUST display the message exactly as written above.
-- You MUST wait for the user's response before proceeding.
+- You MUST proceed directly to step 3 (Determine User's Choice) after displaying the help message.
 
 ### 3. Determine User's Choice
 
+Ask the user "What would you like to do next?" and wait for their response. 
 Analyze the user's response to determine if it matches one of the available operations listed in the "## Available operations" section.
 
 **Constraints:**
@@ -81,7 +76,7 @@ Analyze the user's response to determine if it matches one of the available oper
   - "implementation"
   - "code-summary"
 - You MUST execute the corresponding operation if a match is found.
-- If no match is found, you MUST list the available operations again and ask the user, "What would you like to do next?"
+- If no match is found, you MUST list the available operations again without asking a direct question.
 - You MUST NOT proceed without a valid user response.
 
 ## Examples
@@ -104,4 +99,4 @@ I'm not sure what to do.
 ```
 
 **Expected Action:**
-List the available operations again and ask, "What would you like to do next?"
+List the available operations again.
