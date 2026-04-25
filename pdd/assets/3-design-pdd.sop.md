@@ -104,9 +104,10 @@ Provide a summary of all artifacts created and next steps.
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Technical design"
 - You MUST list all artifacts created during the process
 - You MUST provide a brief overview of the design and implementation plan
-- You MUST suggest next steps for the user
 - You SHOULD highlight any areas that may need further refinement
 - You MUST present this summary to the user in the conversation
+- You MUST suggest the user to continue the PDD process on a fresh agent session
+- You MUST wait for explicit user direction before proceeding to any subsequent step
 
 ## Examples
 

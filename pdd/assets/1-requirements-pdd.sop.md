@@ -90,6 +90,8 @@ Review the current requirements and identify any typical requirements that might
 
 **Constraints:**
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Requirements Clarification"
+- You MUST suggest the user to continue the PDD process on a fresh agent session
+- You MUST wait for explicit user direction before proceeding to any subsequent step
 
 ## Examples
 

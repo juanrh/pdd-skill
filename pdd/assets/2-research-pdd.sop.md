@@ -84,6 +84,8 @@ Determine if further requirements clarification or research is needed before pro
 
 **Constraints:**
 - You MUST update the **project progress file** `{project_dir}/progress.md`: mark as complete the step "Preliminary Research"
+- You MUST suggest the user to continue the PDD process on a fresh agent session
+- You MUST wait for explicit user direction before proceeding to any subsequent step
 
 ## Examples
 
