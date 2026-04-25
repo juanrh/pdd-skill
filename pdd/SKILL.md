@@ -79,7 +79,7 @@ Read `{implementation_pdd_sop}` and follow its instructions:
 
 - You MUST use the default value for `project_dir`: do not ask for it
 
-### Codebase Summary ("summary")
+### Codebase Summary ("code-summary")
 
 Read `{codebase_summary_sop}` and follow its instructions:
 

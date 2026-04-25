@@ -44,7 +44,7 @@ The available operations and their shorthands are:
 - Preliminary Research ("research")
 - Technical Design ("design")
 - Implementation ("implementation")
-- Codebase Summary ("summary")
+- Codebase Summary ("code-summary")
 
 To **track the progress** use the following files:
 
@@ -55,7 +55,7 @@ To **track the progress** use the following files:
 **Recommendations**: 
 - Start a new _agent session_ for each _phase_ (requirements, research, design, ...). The project directory will save the project context for the agent.
   - Use "PDD skill continue" on the new session to quickly load the skill and move to the next phase.
-- After _completing_ an implementation _step or task_, consider _updating_ the persistent agent _context_ at `.agents/summary` using "PDD skill summary" in a separate agent session before continuing with the next task.
+- After _completing_ an implementation _step or task_, consider _updating_ the persistent agent _context_ at `.agents/summary` using "PDD skill code-summary" in a separate agent session before continuing with the next task.
 
 ---
 
@@ -79,7 +79,7 @@ Analyze the user's response to determine if it matches one of the available oper
   - "research"
   - "design"
   - "implementation"
-  - "summary"
+  - "code-summary"
 - You MUST execute the corresponding operation if a match is found.
 - If no match is found, you MUST list the available operations again and ask the user, "What would you like to do next?"
 - You MUST NOT proceed without a valid user response.
