@@ -3,7 +3,7 @@
 This is a skill to emulate [Spec-Driven Development](https://www.youtube.com/watch?v=4qcWgPb-8Fk) as implemented on [Kiro](https://kiro.dev/docs/specs/), using the [Prompt-Driven Development](https://youtu.be/cf-WOKVn768?si=dNfaTMhOcJVYxsCk&t=2480) approach that was its predecessor.  
 See more about the PDD process on the [skill](./pdd/SKILL.md) itself.
 
-Use the PDD skill by mentioning "PDD" followed by an [operation](./#usage) in your prompts. The skill guides you through each phase of the PDD process.
+Use the PDD skill by mentioning "PDD" followed by an [operation](#usage) in your prompts. The skill guides you through each phase of the PDD process.
 
 Watch a [demo](https://youtu.be/ykfeVzbcYnE) using the skill to develop a toy REST API.
 
