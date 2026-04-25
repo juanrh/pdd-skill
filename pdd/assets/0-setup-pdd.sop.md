@@ -2,7 +2,7 @@
 
 ## Overview
 
-This sop guides you through the process of transforming a rough idea into a detailed design document with an implementation plan and todo list. It follows the Prompt-Driven Development methodology to systematically refine your idea, conduct necessary research, create a comprehensive design, and develop an actionable implementation plan. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
+This SOP guides you through the process of transforming a rough idea into a detailed design document with an implementation plan and todo list. It follows the Prompt-Driven Development methodology to systematically refine your idea, conduct necessary research, create a comprehensive design, and develop an actionable implementation plan. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
 
 ## Parameters
 
@@ -22,7 +22,6 @@ This sop guides you through the process of transforming a rough idea into a deta
 - If project_name is not provided, You MUST generate a short kebab-case name from the rough idea, prefixed with the current date in YYYY-MM-DD format (e.g., "2026-01-30-template-manager", "2026-01-30-auth-system")
 - You SHOULD save the acquired rough idea to a consistent location for use in subsequent steps
 - You MUST NOT overwrite the existing project directory because this could destroy previous work and cause data loss
-- You MUST ask for project_dir if it is not given and the generated default directory already exists and has contents from previous iteration
 
 ## Steps
 

@@ -7,7 +7,7 @@ description: Develop software using the Prompt-Driven Development (PDD) method f
 
 ## Overview
 
-**Prompt-Driven Development (PDD)** is a methodology for AI assisted coding that guides both the user and the coding agent to follow a defined software development process, to implement a new feature for a __project_name__. The process consists on the following **phases** (for **`{project_dir}` equals to `.agents/planning/{project_name}`**):
+**Prompt-Driven Development (PDD)** is a methodology for AI assisted coding that guides both the user and the coding agent to follow a defined software development process, to implement a new feature for a `{project_name}`. The process consists on the following **phases** (for **`{project_dir}` equals to `.agents/planning/{project_name}`**):
 
 1. **Requirements Clarification**: Guide the user through a series of questions to refine the initial _rough idea_ and develop a thorough specification. Files: `{project_dir}/rough-idea.md` (containing the provided rough idea); `{project_dir}/idea-honing.md` (for requirements clarification)
 2. **Preliminary Research**: Conduct research on relevant technologies, libraries, or existing code that could inform the design, while collaborating with the user for guidance. Directory for research notes: `{project_dir}/research/`

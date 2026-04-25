@@ -23,7 +23,7 @@ Before displaying any help message, check if the user already mentioned a comman
   - "research"
   - "design"
   - "implementation"
-  - "summary"
+  - "code-summary"
 - If a match is found, you MUST skip directly to executing the corresponding operation without executing any other steps of this SOP, because the user has already indicated what they want to do.
 - If no match is found, you MUST proceed to step 2 (Show Available Operations).
 - You MUST NOT display the help message (step 2) if a prior operation match was found, since the user has already indicated their intent and showing the help would be redundant and disruptive.
