@@ -64,7 +64,7 @@ Find a **pending task file** at `{project_dir}/implementation/tasks/step{NN}` wh
 **Constraints:**
 - You MUST look for task files with the pattern `step{NN}/task-*.code-task.md` where NN is zero-padded (e.g., step01/task-01-project-setup.code-task.md, step10/task-01-another-task.code-task.md)
 - You MUST identify task files that start with "task-" in their filename (not "DONE-task-")
-- If no pending task file exists, You MUST tell the user: "Please open a new session to continue with the next task, using the prompt 'PDD skill continue'"
+- If no pending task file exists, You MUST tell the user: "Please open a new session to continue with the next task, using the prompt 'PDD skill: continue'"
 - If a pending task file exists, You MUST proceed to read and implement it
 
 ### 4. Read Task Requirements
@@ -104,7 +104,7 @@ After implementing a task file:
 - You MUST ask the user for confirmation before moving to the next task
 - You SHOULD remind the user that:
   1) Agent performance improves when using a fresh session
-  2) If the task modified the code a lot, it's recommended to use "PDD skill code-summary" to update the persistent agent context
+  2) If the task modified the code a lot, it's recommended to use "PDD skill: code-summary" to update the persistent agent context
 - Only after receiving user confirmation, if the user confirms you MUST repeat steps 3-6 for the next pending task file
 
 ### 7. Validate Step Completion
@@ -116,7 +116,7 @@ In `{project_dir}/implementation/tasks/step{NN}` see if there is any files that 
 - You MUST ask the user to validate step completion if no pending tasks remain
 - You MUST follow the user's instruction on marking the step as complete
 - You SHOULD suggest the user:
-  - Start a new agent session and use "PDD skill code-summary" to update the persistent agent context
+  - Start a new agent session and use "PDD skill: code-summary" to update the persistent agent context
   - Then continue the PDD process on a fresh agent session
 
 ## Examples

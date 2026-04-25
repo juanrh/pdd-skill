@@ -54,8 +54,8 @@ To **track the progress** use the following files:
 
 **Recommendations**: 
 - Start a new _agent session_ for each _phase_ (requirements, research, design, ...). The project directory will save the project context for the agent.
-  - Use "PDD skill continue" on the new session to quickly load the skill and move to the next phase.
-- After _completing_ an implementation _step or task_, consider _updating_ the persistent agent _context_ at `.agents/summary` using "PDD skill code-summary" in a separate agent session before continuing with the next task.
+  - Use "PDD skill: continue" on the new session to quickly load the skill and move to the next phase.
+- After _completing_ an implementation _step or task_, consider _updating_ the persistent agent _context_ at `.agents/summary` using "PDD skill: code-summary" in a separate agent session before continuing with the next task.
 
 ---
 
