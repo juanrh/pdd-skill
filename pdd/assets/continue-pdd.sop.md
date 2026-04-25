@@ -30,7 +30,7 @@ Verify the project exists and read the current progress status from the progress
 Based on the PDD phase order, determine which phase should be executed next.
 
 **Constraints:**
-- You MUST follow the PDD phase order: Requirements Clarification → Preliminary Research → Technical Design → Implementation Plan → Task Breakdown → Implementation
+- You MUST follow the PDD phase order: Requirements Clarification → Preliminary Research → Technical Design → Implementation
 - You MUST skip phases that are already marked as completed in the progress file
 - You MUST select the first incomplete phase in the sequence
 

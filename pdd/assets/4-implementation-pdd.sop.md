@@ -112,18 +112,6 @@ In `{project_dir}/implementation/tasks/step{NN}` see if there is any files that 
 - You MUST ask the user to validate step completion if no pending tasks remain
 - You MUST follow the user's instruction on marking the step as complete
 
-### 8. Update Codebase Summary
-
-Before proceeding, ask the user: "Would you like to update the codebase summary?" If the user declines, complete this step immediately without making any changes. Otherwise, read `{codebase_summary_sop}` and follow its instructions to summarize the code base, using default values for all parameters except `codebase_path`, which MUST be set to the root path of the code project modified in previous steps.
-
-**Constraints:**
-- You MUST ask the user for confirmation before updating the codebase summary
-- If the user says no, You MUST complete this step immediately without making any changes
-- If the user confirms, You MUST set `codebase_path` to the root path of the code project modified in previous steps
-- If the user confirms, You MUST use default values for all other parameters of the codebase summary SOP
-- If the user confirms, You MUST update the codebase summary on every change
-- If the user confirms, You MUST follow all instructions in the codebase summary SOP
-
 ## Examples
 
 ### Example Task File Before Completion

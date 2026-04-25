@@ -20,7 +20,7 @@ description: Develop software using the Prompt-Driven Development (PDD) method f
 Each phase can be completed in 1 or more agent sessions, using the files at `{project_dir}` as **persistent memory**.
 The **project progress file** `{project_dir}/progress.md` tracks the progress folowing the PDD process. 
 
-## Available operations
+## File resources
 
 For every file path specified here, you MUST interpret it as a relative path from the parent directory of this file.  
 
@@ -35,7 +35,11 @@ For every file path specified here, you MUST interpret it as a relative path fro
 - `codebase_summary_sop` = `./assets/codebase-summary.sop.md`
 - `code_task_generator_sop` = `./assets/code-task-generator.sop.md`
 
+## After loading this skill
+
 After loading this skill you MUST follow the instructions in "### List available operations ("help")" below.
+
+## Operations
 
 ### List available operations ("help")
 
@@ -74,3 +78,12 @@ Read `{design_pdd_sop}` and follow its instructions:
 Read `{implementation_pdd_sop}` and follow its instructions:
 
 - You MUST use the default value for `project_dir`: do not ask for it
+
+### Codebase Summary ("summary")
+
+Read `{codebase_summary_sop}` and follow its instructions:
+
+**Constraints:**
+- You MUST locate the existing codebase, and set `codebase_path` to the root path of the existing codebase
+- You MUST use default values for all other parameters of the codebase summary SOP
+- You MUST summarize the current state of the code
