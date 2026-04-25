@@ -16,7 +16,6 @@ Before displaying any help message, check if the user already mentioned a comman
 
 **Constraints:**
 - You MUST check if the user's prior messages (from before this SOP was loaded) contain any mention of the following operations:
-  - "help"
   - "continue"
   - "setup"
   - "requirements"
@@ -67,7 +66,6 @@ Analyze the user's response to determine if it matches one of the available oper
 
 **Constraints:**
 - You MUST check if the user's response matches any of the following operations:
-  - "help"
   - "continue"
   - "setup"
   - "requirements"
