@@ -11,6 +11,8 @@ Watch a [demo](https://youtu.be/ykfeVzbcYnE) using the skill to develop a toy RE
 
 Prompt-Driven Development (PDD) is a structured approach to AI-assisted coding that replaces unstructured "vibe coding" with a defined process: requirements clarification, research, technical design, and implementation. It serves as the predecessor to [Spec-Driven Development](https://kiro.dev/docs/specs/), as seen in Kiro.
 
+_Note_: this skill is not related to PDD as described on https://promptdriven.ai, that refers to another concept. This skill is only concerned PDD as implemented in the [Strands Agents PDD SOP](https://github.com/strands-agents/agent-sop/blob/main/agent-sops/pdd.sop.md).
+
 ## Installation
 
 Copy the directory `pdd` to your coding agent skills directory (e.g. `.vibe/skills`).
