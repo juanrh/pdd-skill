@@ -19,14 +19,14 @@ project_name="${1}"
 # Validate project_name: only allow alphanumeric, hyphens, and underscores
 if ! [[ "${project_name}" =~ ^[a-zA-Z0-9_-]+$ ]]; then
   echo "Error: project_name must contain only alphanumeric characters, hyphens, and underscores, got '${project_name}'" >&2
-  exit 1
+  exit 2
 fi
 
 project_dir="./.agents/planning/${project_name}"
 
 if [ -d "${project_dir}" ]; then
   echo "PDD project with name ${project_name} already exists at ${project_dir}, aborting"
-  exit 2
+  exit 3
 fi
 
 mkdir -p "${project_dir}"
