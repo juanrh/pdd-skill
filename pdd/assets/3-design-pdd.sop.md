@@ -2,28 +2,16 @@
 
 ## Overview
 
-This sop guides you through the process of transforming a rough idea into a detailed design document with an implementation plan and todo list. It follows the Prompt-Driven Development methodology to systematically refine your idea, conduct necessary research, create a comprehensive design, and develop an actionable implementation plan. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
+This SOP guides you through the process of transforming a refined requirements document and research findings into a detailed design document with an implementation plan and todo list. It is phase 3 of the Prompt-Driven Development methodology and assumes the upstream requirements clarification and research phases have already been completed. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
 
 ## Parameters
 
-- **project_name** (required): A short, descriptive name for the project. If not provided, will be generated from the rough idea
+- **project_name** (required): A short, descriptive name for the project.
 - **project_dir** (optional, default: ".agents/planning/{project_name}"): The base directory where all project files will be stored
-- **rough_idea** (optional, default: "{project_dir}/rough-idea.md"): The initial concept or idea you want to develop into a detailed design
-
 
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time
-- You MUST support multiple input methods including:
-  - Direct input: Text provided directly in the conversation
-  - File path: Path to a local file containing the rough idea
-  - URL: Link to an internal resource (e.g., Quip doc, wiki page)
-  - Other methods: You SHOULD be open to other ways the user might want to provide the idea
-- You MUST use appropriate tools to access content based on the input method
 - You MUST confirm successful acquisition of all parameters before proceeding
-- If project_name is not provided, You MUST generate a short kebab-case name from the rough idea, prefixed with the current date in YYYY-MM-DD format (e.g., "2026-01-30-template-manager", "2026-01-30-auth-system")
-- You SHOULD save the acquired rough idea to a consistent location for use in subsequent steps
-- You MUST NOT overwrite the existing project directory because this could destroy previous work and cause data loss
-- You MUST ask for project_dir if it is not given and the generated default directory already exists and has contents from previous iteration
 
 ## Steps
 
@@ -58,7 +46,7 @@ Develop a comprehensive design document based on the requirements and research.
 - You SHOULD highlight design decisions and their rationales, referencing research findings where applicable
 - You SHOULD link relevant sections of documents from {project_dir}/research/
 - You MUST review the design with the user and iterate based on feedback
-- You MUST explicitly ask the user if they are ready to proceed to implementation before moving to Step 7
+- You MUST explicitly ask the user if they are ready to proceed to implementation before moving to Step 2
 - You MUST NOT proceed to the implementation plan step without explicit user confirmation because this could skip important design refinement
 - You MUST offer to return to requirements clarification or research if gaps are identified during design
 
@@ -114,29 +102,16 @@ Provide a summary of all artifacts created and next steps.
 ### Example Input
 
 ```
-Rough idea: I want to build a feature for our team's internal tool that allows users to create and manage templates for common documents we produce. Users should be able to create, edit, and share templates, as well as use them to generate new documents with custom fields.
-
 Project name: template-feature
+Project dir: .agents/planning/template-feature
 ```
 
 ### Example Output
 
 ```
-# Research Phase Interaction
-
-Based on your requirements, I've identified several areas that would benefit from research:
-
-1. **Existing template solutions** - Understanding what's already available
-2. **Storage and versioning approaches** - How to handle template versions and sharing
-3. **Custom field validation patterns** - Best practices for dynamic field validation
-
-I notice you have several additional MCP search tools available beyond the standard ones, including 'peccy web search' and other external search capabilities. Should I incorporate these additional search tools into the research process for broader coverage of template management solutions and industry best practices?
-
----
-
 # Project Summary
 
-I've completed the transformation of your rough idea into a detailed design with an implementation plan. Here's what was created:
+I've completed the transformation of your project requirements into a detailed design with an implementation plan. Here's what was created:
 
 ## Directory Structure
 - .agents/planning/template-feature/

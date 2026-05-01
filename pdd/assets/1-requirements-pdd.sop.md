@@ -12,12 +12,6 @@ This SOP is the first phase of the PDD process. It guides you through refining a
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time
 - You MUST use `rough_idea` = `{project_dir}/rough-idea.md` for the remainder of this SOP. This file will contain the rough idea — the initial concept to be developed into a detailed requirements document.
-- You MUST support multiple input methods including:
-  - Direct input: Text provided directly in the conversation
-  - File path: Path to a local file containing the rough idea
-  - URL: Link to an internal resource (e.g., Quip doc, wiki page)
-  - Other methods: You SHOULD be open to other ways the user might want to provide the idea
-- You MUST use appropriate tools to access content based on the input method
 - You MUST confirm successful acquisition of all parameters before proceeding
 - If project_name is not provided, You MUST generate a short kebab-case name from the rough idea, prefixed with the current date in YYYY-MM-DD format (e.g., "2026-01-30-template-manager", "2026-01-30-auth-system")
 - You SHOULD save the acquired rough idea to a consistent location for use in subsequent steps
