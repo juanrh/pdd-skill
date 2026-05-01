@@ -8,11 +8,10 @@ This sop guides you through the process of transforming a rough idea into a deta
 
 - **project_name** (required): A short, descriptive name for the project. If not provided, will be generated from the rough idea
 - **project_dir** (optional, default: ".agents/planning/{project_name}"): The base directory where all project files will be stored
-- **rough_idea** (optional, default: "{project_dir}/rough-idea.md"): The initial concept or idea you want to develop into a detailed design
-
 
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time
+- You MUST use `rough_idea` = `{project_dir}/rough-idea.md` for the remainder of this SOP. This file will contain the rough idea — the initial concept to be developed into a detailed requirements document.
 - You MUST support multiple input methods including:
   - Direct input: Text provided directly in the conversation
   - File path: Path to a local file containing the rough idea
@@ -31,12 +30,11 @@ This sop guides you through the process of transforming a rough idea into a deta
 
 Guide the user through a series of questions to refine the initial idea and develop a thorough specification.
 
-**Constraints:**
+**Setup Constraints:**
 - You MUST create an empty {project_dir}/idea-honing.md file if it doesn't already exist
-- You MUST ask ONLY ONE question at a time and wait for the user's response before asking the next question
-- You MUST NOT list multiple questions for the user to answer at once because this overwhelms users and leads to incomplete responses
-- You MUST NOT pre-populate answers to questions without user input because this assumes user preferences without confirmation
-- You MUST NOT write multiple questions and answers to the idea-honing.md file at once because this skips the interactive clarification process
+- You MUST load any relevant agent skills you have available
+
+**Question flow Constraints:**
 - You MUST follow this exact process for each question:
   1. Formulate a single question
   2. Append the question to {project_dir}/idea-honing.md
@@ -44,16 +42,25 @@ Guide the user through a series of questions to refine the initial idea and deve
   4. Wait for the user's complete response, which may require brief back-and-forth dialogue across multiple turns.
   5. Once you have their complete response, append the user's answer (or final decision) to {project_dir}/idea-honing.md
   6. Only then proceed to formulating the next question
+- You MUST ask ONLY ONE question at a time and wait for the user's response before asking the next question
+- You MUST NOT list multiple questions for the user to answer at once because this overwhelms users and leads to incomplete responses
+- You MUST ensure you have the user's complete response before recording it and moving to the next question
 - You MAY suggest possible answers when asking a question, but MUST wait for the user's actual response
+
+**Recording Constraints:**
 - You MUST format the idea-honing.md document with clear question and answer sections
 - You MUST include the final chosen answer in the answer section
 - You MAY include alternative options that were considered before the final decision
-- You MUST ensure you have the user's complete response before recording it and moving to the next question
+- You MUST NOT pre-populate answers to questions without user input because this assumes user preferences without confirmation
+- You MUST NOT write multiple questions and answers to the idea-honing.md file at once because this skips the interactive clarification process
+
+**Question content Constraints:**
 - You MUST continue asking questions until sufficient detail is gathered
 - You SHOULD ask about edge cases, user experience, technical constraints, and success criteria
 - You SHOULD adapt follow-up questions based on previous answers
-- You MUST load any relevant agent skills you have available
 - You MAY suggest options when the user is unsure about a particular aspect
+
+**Boundary & handoff Constraints:**
 - You MAY recognize when the requirements clarification process appears to have reached a natural conclusion
 - You MUST explicitly ask the user if they feel the requirements clarification is complete before moving to the next step
 - You MUST offer the option to conduct research if questions arise that would benefit from additional information
@@ -83,7 +90,7 @@ Review the current requirements and identify any typical requirements that might
 - You MUST ask the user if they want to continue iterating on requirements
 - If the user wants to continue, You MUST return to Step 1 (Requirements Clarification)
 - If the user is satisfied, You MUST proceed to the next step
-- You MUST NOT add requirements without explicit user approval
+- You MUST NOT add requirements without explicit user approval because unapproved requirements may not reflect the user's actual needs and could lead to scope creep
 - You MUST document the user's decision in the idea-honing.md file
 
 ### 4. Update project progress file
