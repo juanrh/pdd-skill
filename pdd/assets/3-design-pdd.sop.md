@@ -20,9 +20,16 @@ This SOP guides you through the process of transforming a refined requirements d
 Develop a comprehensive design document based on the requirements and research.
 
 **Constraints:**
-- You MUST create a detailed design document at {project_dir}/design/detailed-design.md
+
+**Design input constraints:**
+- You MUST load any relevant agent skills you have available
 - The design MUST implement the requirements listed at {project_dir}/idea-honing.md
 - The design MUST take into account all the ideas and insights documented at {project_dir}/research/
+- You SHOULD link relevant sections of documents from {project_dir}/research/
+- You MUST ensure the design addresses all requirements identified during the clarification process
+
+**Design output constraints:**
+- You MUST create a detailed design document at {project_dir}/design/detailed-design.md
 - You MUST write the design as a standalone document that can be understood without reading other project files
 - You MUST include the following sections in the design document:
   - Overview
@@ -41,10 +48,9 @@ Develop a comprehensive design document based on the requirements and research.
   - Key constraints and limitations identified during research
 - You SHOULD include diagrams or visual representations when appropriate using mermaid syntax
 - You MUST generate mermaid diagrams for architectural overviews, data flow, and component relationships
-- You MUST load any relevant agent skills you have available
-- You MUST ensure the design addresses all requirements identified during the clarification process
 - You SHOULD highlight design decisions and their rationales, referencing research findings where applicable
-- You SHOULD link relevant sections of documents from {project_dir}/research/
+
+**User collaboration constraints:**
 - You MUST review the design with the user and iterate based on feedback
 - You MUST explicitly ask the user if they are ready to proceed to implementation before moving to Step 2
 - You MUST NOT proceed to the implementation plan step without explicit user confirmation because this could skip important design refinement
