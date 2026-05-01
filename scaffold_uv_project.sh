@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Portable in-place sed: macOS (BSD) requires -i '', Linux (GNU) requires -i
+sedi() {
+    if [[ "$(uname)" == "Darwin" ]]; then
+        sed -i '' "$@"
+    else
+        sed -i "$@"
+    fi
+}
 
 # See params on
 # https://github.com/osprey-oss/cookiecutter-uv/blob/main/cookiecutter.json
@@ -34,8 +45,8 @@ rm -rf "${DEST_DIR}"
 cp -R "${TMP_DIR}/calc-api" "${DEST_DIR}"
 
 # Prevent precommit messing up with the whole git repo
-sed -i '/@uv run pre-commit install/d' "${DEST_DIR}/Makefile"
-sed -i 's/@uv run pre-commit run -a/@uv run pre-commit run --files ./g' "${DEST_DIR}/Makefile"
+sedi '/@uv run pre-commit install/d' "${DEST_DIR}/Makefile"
+sedi 's/@uv run pre-commit run -a/@uv run pre-commit run --files ./g' "${DEST_DIR}/Makefile"
 pushd "${DEST_DIR}"
 make install check
 make check test
