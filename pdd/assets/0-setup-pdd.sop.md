@@ -8,7 +8,6 @@ This SOP guides you through the process of transforming a rough idea into a deta
 
 - **rough_idea** (required): The initial concept or idea you want to develop into a detailed design
 - **project_name** (optional): A short, descriptive name for the project. If not provided, will be generated from the rough idea
-- **project_dir** (optional, default: ".agents/planning/{project_name}"): The base directory where all project files will be stored
 
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time
@@ -22,6 +21,7 @@ This SOP guides you through the process of transforming a rough idea into a deta
 - If project_name is not provided, You MUST generate a short kebab-case name from the rough idea, prefixed with the current date in YYYY-MM-DD format (e.g., "2026-01-30-template-manager", "2026-01-30-auth-system")
 - You SHOULD save the acquired rough idea to a consistent location for use in subsequent steps
 - You MUST NOT overwrite the existing project directory because this could destroy previous work and cause data loss
+- You MUSE use `project_dir` = `.agents/planning/{project_name}` for the reminder of this SOP. This is the base directory where all project files will be stored.
 
 ## Steps
 
@@ -30,31 +30,13 @@ This SOP guides you through the process of transforming a rough idea into a deta
 Set up a directory structure to organize all artifacts created during the process.
 
 **Constraints:**
-- You MUST create the specified project directory if it doesn't already exist
-- You MUST create the following files:
-  - {project_dir}/rough-idea.md (containing the provided rough idea)
-  - {project_dir}/idea-honing.md (for requirements clarification, MUST be created empty)
-- You MUST create the following subdirectories:
-  - {project_dir}/research/ (directory for research notes)
-  - {project_dir}/design/ (directory for design documents)
-  - {project_dir}/implementation/ (directory for implementation plans)
-  - {project_dir}/implementation/tasks (directory for implementation tasks)
+- You MUST run the command `pdd/scripts/setup_pdd_project_dir.sh {project_name}` from the project root to create and populate the project directory under `{project_dir}`
+- If the script outputs a message indicating the project directory already exists (i.e., "already exists"), You MUST inform the user that a project with this name already exists, and stop the SOP immediately. This is to prevent accidental overwrites or conflicts with previous work
+- After the script successfully creates the project directory, You MUST populate `{project_dir}/rough-idea.md` with the content of the `{rough_idea}` parameter
 - You MUST notify the user when the structure has been created
 - You MUST explain that this will ensure all project files remain in context throughout the process
 
-### 2. Create project progress file
-
-- You MUST create the **project progress file** `{project_dir}/progress.md` with the following content:
-
-```md
-- [x] Project setup
-- [ ] Requirements Clarification
-- [ ] Preliminary Research
-- [ ] Technical design
-- [ ] Implementation
-```
-
-### 3. Prompt the user for next steps
+### 2. Prompt the user for next steps
 
 - You MUST provide an overview of the PDD process as explained on "## Overview" before.
 - You MUST explain that the process is iterative and the user can move between requirements clarification and research as needed

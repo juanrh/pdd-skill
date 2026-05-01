@@ -53,8 +53,6 @@ Read `{continue_pdd_sop}` and follow its instructions
 
 Read `{setup_pdd_sop}` and follow its instructions:
 
-- You MUST use the default value for `project_dir`: do not ask for it
-
 ### Requirements Clarification ("requirements")
 
 Read `{requirements_pdd_sop}` and follow its instructions:
