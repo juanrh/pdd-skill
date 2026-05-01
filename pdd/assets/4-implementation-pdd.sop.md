@@ -38,7 +38,7 @@ If no existing task file is found, read `{code_task_generator_sop}` and follow i
 
 **Constraints for task generation:**
 - You MUST locate and read the code task generator SOP
-- You MUST load any relevant agent skills you have available
+- You SHOULD load any relevant agent skills you have available to improve task quality
 - You MUST provide all required parameters to the SOP
 - You MUST ensure the output directory exists before generating tasks
 - You MUST follow all instructions in the code task generator SOP
@@ -55,7 +55,7 @@ After generating tasks (or if resuming existing tasks), You MUST present the imp
 - You MUST be responsive to user concerns and suggestions
 - You MUST make requested adjustments to the plan
 - You MUST obtain explicit user approval before proceeding
-- You MUST document any changes made based on user feedback
+- You SHOULD document any changes made based on user feedback for future reference
 
 ### 3. Process Task Files
 
@@ -75,8 +75,8 @@ Read the contents of the pending task file to understand the implementation requ
 - You MUST read the entire task file content
 - You MUST identify all requirements, specifications, and constraints listed in the task file
 - You MUST understand the expected outcomes and deliverables
-- You MUST note any dependencies or prerequisites mentioned in the task
-- You MUST load any relevant agent skills you have available
+- You SHOULD note any dependencies or prerequisites mentioned in the task
+- You MAY load any relevant agent skills you have available to improve implementation quality
 
 ### 5. Implement Task Requirements
 
@@ -85,12 +85,12 @@ Perform the coding work and other changes required to implement the task as desc
 **Constraints:**
 - You MUST follow all instructions specified in the task file
 - You MUST create or modify files as required by the task
-- You MUST write clean, well-structured code following project conventions
-- You MUST test your implementation to ensure it works correctly
-- You MUST handle any errors or edge cases appropriately
-- You MUST document your changes if required by the task
+- You SHOULD write clean, well-structured code following project conventions
+- You SHOULD test your implementation to ensure it works correctly
+- You SHOULD handle any errors or edge cases appropriately
+- You SHOULD document your changes when the nature of the change warrants explanation beyond what the code conveys
 - You MUST verify that all requirements from the task file are met
-- You MUST load any agent skills you have available that are relevant for implementing these requirements
+- You MAY load any agent skills you have available that are relevant for implementing these requirements
 
 ### 6. Mark Task Completion
 
@@ -99,10 +99,10 @@ After implementing a task file:
 **Constraints:**
 - You MUST mark the task as complete by renaming the file from `task-*.code-task.md` to `DONE-task-*.code-task.md`
 - You MUST verify the task was completed successfully by reviewing the implementation
-- You MUST inform the user: "Task complete 🎉. Looking for more pending tasks"
-- You MUST look for another pending task file to continue processing
 - You MUST ask the user for confirmation before moving to the next task
-- You MUST remind the user that:
+- You SHOULD inform the user: "Task complete 🎉. Looking for more pending tasks"
+- You SHOULD look for another pending task file to continue processing
+- You SHOULD remind the user that:
   1) Agent performance improves when using a fresh session
   2) If the task modified the code a lot, it's recommended to use "PDD skill: code-summary" to update the persistent agent context
 - Only after receiving user confirmation, if the user confirms you MUST repeat steps 3-6 for the next pending task file
@@ -115,7 +115,7 @@ In `{project_dir}/implementation/tasks/step{NN}` see if there is any files that 
 - You MUST check for any remaining pending task files
 - You MUST ask the user to validate step completion if no pending tasks remain
 - You MUST follow the user's instruction on marking the step as complete
-- You MUST suggest the user:
+- You SHOULD suggest the user:
   - Start a new agent session and use "PDD skill: code-summary" to update the persistent agent context
   - Then continue the PDD process on a fresh agent session
 
