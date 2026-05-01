@@ -2,13 +2,14 @@
 
 ## Overview
 
-This sop guides you through the process of transforming a rough idea into a detailed design document with an implementation plan and todo list. It follows the Prompt-Driven Development methodology to systematically refine your idea, conduct necessary research, create a comprehensive design, and develop an actionable implementation plan. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
+This SOP guides you through the preliminary research phase of Prompt-Driven Development. It covers summarizing the existing codebase (if applicable), researching relevant technologies and approaches to inform the design, and checkpointing with the user to determine whether the requirements and research are sufficient before proceeding to the detailed design phase. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
+
+Run this SOP after the requirements clarification phase has completed and `{project_dir}/idea-honing.md` exists, or when the iteration checkpoint from a prior pass determines that more research is needed.
 
 ## Parameters
 
 - **project_name** (required): A short, descriptive name for the project. If not provided, will be generated from the rough idea
 - **project_dir** (optional, default: ".agents/planning/{project_name}"): The base directory where all project files will be stored
-- **rough_idea** (optional, default: "{project_dir}/rough-idea.md"): The initial concept or idea you want to develop into a detailed design
 
 **Constraints for parameter acquisition:**
 - You MUST ask for all required parameters upfront in a single prompt rather than one at a time
@@ -40,27 +41,31 @@ Ask the user if they want to summarize the existing codebase. If they say yes, r
 Conduct research on relevant technologies, libraries, or existing code that could inform the design, while collaborating with the user for guidance.
 
 **Constraints:**
+**Research planning constraints:**
 - You MUST identify areas where research is needed based on the requirements listed at {project_dir}/idea-honing.md
-
 - You MUST propose an initial research plan to the user, listing topics to investigate
 - You MUST ask the user for input on the research plan, including:
   - Additional topics that should be researched
   - Specific resources (files, websites, internal tools) the user recommends
   - Areas where the user has existing knowledge to contribute
 - You MUST incorporate user suggestions into the research plan
+- You MUST ask the user whether other available search tools should also be used
+- You MUST load any relevant agent skills you have available
+
+**Research execution constraints:**
 - You MUST document research findings in separate markdown files in the {project_dir}/research/ directory
 - You SHOULD organize research by topic (e.g., {project_dir}/research/existing-code.md, {project_dir}/research/technologies.md)
 - You MUST include mermaid diagrams when documenting system architectures, data flows, or component relationships in research
-- You MUST load any relevant agent skills you have available
 - You MUST include links to relevant references and sources when research is based on external materials (websites, documentation, articles, etc.)
+- You SHOULD cite sources and include relevant links in research documents
 - You MAY use tools like search_internal_code, read_internal_website, or fs_read to gather information
-- You MUST ask the user whether other available search tools should also be used.
+
+**User collaboration constraints:**
 - You MUST periodically check with the user during the research process (these check-ins may involve brief dialogue to clarify feedback) to:
   - Share preliminary findings
   - Ask for feedback and additional guidance
   - Confirm if the research direction remains valuable
 - You MUST summarize key findings that will inform the design
-- You SHOULD cite sources and include relevant links in research documents
 - You MUST ask the user if the research is sufficient before proceeding to the next step
 - You MUST offer to return to requirements clarification if research uncovers new questions or considerations
 - You MUST NOT automatically return to requirements clarification after research without explicit user direction because this could disrupt the user's intended workflow
@@ -112,41 +117,41 @@ I notice you have several additional MCP search tools available beyond the stand
 
 ---
 
-# Project Summary
+# Research Findings
 
-I've completed the transformation of your rough idea into a detailed design with an implementation plan. Here's what was created:
+I've completed the research phase. Here's a summary:
 
 ## Directory Structure
 - .agents/planning/template-feature/
-  - rough-idea.md (your initial concept)
-  - idea-honing.md (our Q&A requirements clarification)
   - research/
-    - existing-templates.md
-    - storage-options.md
-    - external-solutions.md
-  - design/
-    - detailed-design.md
-  - implementation/
-    - plan.md (includes implementation checklist)
-    - tasks/
-  - summary.md (this document)
+    - existing-templates.md (analysis of existing template solutions in the codebase)
+    - storage-options.md (comparison of storage and versioning approaches)
+    - field-validation-patterns.md (best practices for dynamic field validation)
 
-## Key Design Elements
-- Template management system with CRUD operations
-- Role-based access control for sharing
-- Versioning system for templates
-- Custom fields with validation
-- Document generation engine
+## Key Findings
+- The existing codebase uses a `metadata` table that could be extended for templates
+- JSONB fields in PostgreSQL are the recommended storage approach for dynamic fields
+- Validation can be handled via JSON Schema, which the team already uses elsewhere
 
-## Implementation Approach
-The implementation plan breaks down the work into 12 incremental steps, starting with core data models and building up to the complete feature set.
+---
 
-## Next Steps
-1. Review the detailed design document at .agents/planning/template-feature/design/detailed-design.md
-2. Check the implementation plan and checklist at .agents/planning/template-feature/implementation/plan.md
-3. Begin implementation following the checklist in the implementation plan
+# Iteration Checkpoint
 
-Would you like me to explain any specific part of the design or implementation plan in more detail?
+Here's where we stand:
+- **Requirements**: Clarified and documented in `idea-honing.md`
+- **Research**: Completed, with findings documented in the `research/` directory
+
+Are you ready to proceed to the detailed design phase, or would you like to:
+- Return to requirements clarification to refine any points based on the research findings?
+- Conduct additional research on any specific topic?
+```
+
+```
+# Progress File Update
+
+Marked "Preliminary Research" as complete in .agents/planning/template-feature/progress.md.
+
+To continue with the PDD process, start a fresh agent session and invoke the PDD skill again — it will pick up from the detailed design phase.
 ```
 
 ## Troubleshooting

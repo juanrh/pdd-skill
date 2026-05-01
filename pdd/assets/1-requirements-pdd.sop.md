@@ -2,7 +2,7 @@
 
 ## Overview
 
-This sop guides you through the process of transforming a rough idea into a detailed design document with an implementation plan and todo list. It follows the Prompt-Driven Development methodology to systematically refine your idea, conduct necessary research, create a comprehensive design, and develop an actionable implementation plan. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
+This SOP is the first phase of the PDD process. It guides you through refining a rough idea into a set of clear, well-defined requirements through an interactive Q&A process. The output is a documented requirements list that will serve as the foundation for subsequent design and implementation phases. The process is designed to be iterative, allowing movement between requirements clarification and research as needed.
 
 ## Parameters
 
