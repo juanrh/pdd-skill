@@ -85,9 +85,9 @@ Perform the coding work and other changes required to implement the task as desc
 **Constraints:**
 - You MUST follow all instructions specified in the task file
 - You MUST create or modify files as required by the task
-- You SHOULD write clean, well-structured code following project conventions
+- You MUST write clean, well-structured code following project conventions
 - You SHOULD test your implementation to ensure it works correctly
-- You SHOULD handle any errors or edge cases appropriately
+- You MUST handle any errors or edge cases appropriately
 - You SHOULD document your changes when the nature of the change warrants explanation beyond what the code conveys
 - You MUST verify that all requirements from the task file are met
 - You MAY load any agent skills you have available that are relevant for implementing these requirements
