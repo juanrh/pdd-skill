@@ -1,4 +1,4 @@
-# Prompt-Driven Development
+# PDD Requirements Clarification phase SOP
 
 ## Overview
 

@@ -1,6 +1,10 @@
 ---
 name: pdd
 description: Develop software using the Prompt-Driven Development (PDD) method for AI assisted coding. You should use this skill when the user wants a structured and high quality assisted coding experience
+license: Apache-2.0
+metadata:
+  author: Juan Rodriguez Hortala <juanrh@pm.me>
+  version: "1.0"
 ---
 
 # Prompt-Driven Development assistant
@@ -15,14 +19,15 @@ description: Develop software using the Prompt-Driven Development (PDD) method f
     - Directory for design documents: `{project_dir}/design/`
     - Directory for implementation plans: `{project_dir}/implementation/`
 4. **Implementation**: Implement the implementation plan
-    - Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`Complete each of the tasks
+    - Generate structured code task files to implement the plan. Directory for task files: `{project_dir}/tasks/`
+    - Complete each of the tasks
 
 Each phase can be completed in 1 or more agent sessions, using the files at `{project_dir}` as **persistent memory**.
 The **project progress file** `{project_dir}/progress.md` tracks the progress folowing the PDD process. 
 
 ## File resources
 
-For every file path specified here, you MUST interpret it as a relative path from the parent directory of this file.  
+For every file path specified here, you MUST interpret it as a relative path from the skill root (the directory containing this SKILL.md).
 
 - `scripts_dir` = `./scripts`
 - `help_pdd_sop` = `./assets/help-pdd.sop.md`
@@ -43,11 +48,11 @@ After loading this skill you MUST follow the instructions in "### List available
 
 ### List available operations ("help")
 
-Read `{help_pdd_sop}` and follow its instructions
+Read `{help_pdd_sop}` and follow its instructions:
 
 ### Continue PDD process ("continue")
 
-Read `{continue_pdd_sop}` and follow its instructions
+Read `{continue_pdd_sop}` and follow its instructions:
 
 ### Setup new PDD project ("setup")
 
